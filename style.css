@@ -1,0 +1,240 @@
+:root {
+    --text-color: #3A3D4D;
+    --text-color-secondary: #fff;
+    --h1-color: #FFFFFF;
+    --h2-color: #0B1013;
+    --h3-color: #0B1013;
+    --btn-primary-color: #fff;
+    --btn-primary-bg-color: #2D5BFF;
+    --btn-primary-border-color: #2D5BFF;
+    --btn-primary-hover-bg-color: rgba(255, 255, 255, 0.801);
+    --font-family-primary: 'Manrope', sans-serif;
+    --a-color: #2D5BFF;
+    --default-size: 1rem;
+    --text-size: 1.25rem;
+    --h1-size: 4rem;
+    --h2-size: 3rem;
+    --h3-size: 1.5rem;
+    --bg-color-primary: #fff;
+    --bg-color-secondary: #F4F5F6;
+    --bg-box-color: #F4F5F6;
+    --bg-box-color-highlight: #2D5BFF;
+    --svg-primary-fill: #2D5BFF;
+    --svg-secondary-fill: #0B1013;
+    --svg-inverted-fill: #fff;
+    --transition: all 0.3s linear;
+    --btn-secondary-border: #9A9EB2;
+    --aspect-ratio-4-3: calc((3/4)*100%);
+    --aspect-ratio-16-9: calc((9/16)*100%);
+    --aspect-ratio-21-9: calc((9/21)*100%);
+    --aspect-ratio-3-4: calc((4/3)*100%);
+    --aspect-ratio-3-5: calc((5/3)*100%);
+    --background-image-shadow: brightness(0.7);
+    --h1-weight: 500;
+    --h2-weight: 700;
+    --h2-weight: 400;
+    --text-font-weight: 400;
+    --text-inverted-color: #fff;
+}
+
+
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-Regular.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-ExtraBold.woff2');
+    font-weight: 800;
+}
+
+@font-face {
+
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-Light.woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-LightItalic.woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./assets/fonts/Manrope/Manrope-SemiBold.woff2');
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: var(--text-size);
+    font-family: var(--font-family-primary);
+}
+a{
+    text-decoration: none;
+
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 14px 51px;
+    transition: var(--transition);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--btn-primary-bg-color);
+    color: var(--btn-primary-color);
+    border: 1px solid var(--btn-primary-border-color);
+}
+
+.btn-primary:hover {
+    color: var(--btn-primary-bg-color);
+    background: var(--btn-primary-hover-bg-color);
+    border-color: var(--btn-primary-hover-bg-color);
+}
+
+.btn-transparent {
+    background: transparent;
+    color: var(--btn-primary-color);
+    border: 1px solid white;
+}
+
+.btn-transparent:hover {
+    color: transparent;
+    background: var(--btn-primary-color);
+}
+
+
+
+.h1 {
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+    color: var(--h1-color);
+    font-family: var(--font-family-primary);
+}
+
+.h2 {
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
+    color: var(--h2-color);
+    font-family: var(--font-family-primary);
+}
+
+.h3 {
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+    color: var(--h3-color);
+    font-family: var(--font-family-primary);
+}
+
+.text {
+    font-size: var(--text-size);
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    font-family: var(--font-family-primary);
+}
+
+.text-inverted {
+    color: var(--text-inverted-color);
+}
+
+.aspect-ratio {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    /* USE OTHER CLASS TO DEFINE padding-top */
+}
+/* Use classes below in combination with .aspect-ratio */
+.aspect-ratio-4-3 {
+    padding-top: var(--aspect-ratio-4-3);
+}
+
+.aspect-ratio-16-9 {
+    padding-top: var(--aspect-ratio-16-9);
+}
+
+.aspect-ratio-21-9 {
+    padding-top: var(--aspect-ratio-24-9);
+}
+
+.aspect-ratio-3-4 {
+    padding-top: var(--aspect-ratio-3-4);
+}
+
+.aspect-ratio-3-5 {
+    padding-top: var(--aspect-ratio-3-5);
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+#hero-section{
+    padding-top:100vh;
+}
+.hero-section-bg {
+    object-fit: cover;
+    object-position: center;
+    filter: var(--background-image-shadow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hero-content{
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-content {
+        max-width: 812px;
+    }
+    .absolute-pc{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-content{
+        text-align: center;
+    }
+}
