@@ -93,6 +93,9 @@ body {
     font-size: var(--default-size);
     font-family: var(--font-family-primary);
     line-height: var(--line-height-default);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
@@ -137,7 +140,7 @@ a {
     background: var(--btn-primary-color);
 }
 
-.blue-text{
+.blue-text {
     color: var(--a-color);
 }
 
@@ -229,9 +232,6 @@ a {
     overflow: hidden;
 }
 
-#hero-section {
-    padding-top: 100vh;
-}
 
 .hero-section-bg {
     object-fit: cover;
@@ -268,8 +268,10 @@ a {
     position: relative;
     z-index: 4;
     background-color: var(--bg-color-primary);
-    padding: 96px 117px 0 117px;
     border-radius: var(--border-radius-default);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .box {
@@ -394,6 +396,58 @@ li span.plus {
     padding-bottom: 24px;
 }
 
+#section-4 {
+    margin-top: 24px;
+}
+.container-small{
+    max-width: 1100px;
+}
+
+.discolsures-section{
+    margin-top: 65px;
+    max-width: 860px;
+}
+.discolsures-section ol{
+    counter-reset: list;
+    
+}
+.discolsures-section ol  li:before {
+    content: counter(list, lower-roman) ") ";
+    counter-increment: list;
+  }
+.discolsures-section ol  li {
+    list-style: none;
+    position: relative;
+}
+main{
+    padding-bottom: 64px;
+}
+
+/* footer */
+#footer{
+    padding-bottom: 58px;
+}
+.footer-container{
+    width: auto;
+    margin: 0 auto;
+    max-width: 1100px;
+    border-top: 1px solid #E9EAEC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 48px;
+}
+#footer a.phone-num{
+    font-weight: 700;
+}
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* end footer */
 @media only screen and (min-width: 769px) {
     .hero-content {
         max-width: 812px;
@@ -477,38 +531,79 @@ li span.plus {
     #section-4 .text-container-inner h2.h2 {
         margin-bottom: 32px;
     }
-    #section-5{
+
+    #section-5 {
         margin-top: var(--spacer-default);
     }
+
     #section-5 .box-elements {
         gap: 30px;
         display: flex;
         justify-content: space-evenly;
     }
-    #section-5 .single-box{
+
+    #section-5 .single-box {
         display: flex;
         gap: 24px;
         max-width: 350px;
     }
-    .single-box__content h4{
+
+    .single-box__content h4 {
         margin-bottom: 24px;
         margin-right: 3px;
     }
-    #hero-section .hero-content-left{
+
+    #hero-section .hero-content-left {
         text-align: left;
         left: 10%;
         top: 10%;
         transform: none;
         align-items: flex-start;
     }
-    #hero-section .hero-content-left .h1{
+
+    #hero-section .hero-content-left .h1 {
         max-width: 645px;
     }
+    #hero-section {
+        padding-top: 100vh;
+    }
+
+    .content-section{
+        padding: 96px 117px 0 117px;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
     .spacer {
         margin-top: var(--spacer-default-mobile);
+    }
+    #hero-section{
+        padding-top: var(--aspect-ratio-3-5);
+    }
+
+    .image-container{
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        padding-top: var(--aspect-ratio-3-5);
+    }
+    .image-container img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+    .content-section{
+        padding: 30px 20px;
+    }
+    html, body{
+        font-size: 14px;
     }
 }
 
@@ -567,4 +662,34 @@ li span.plus {
     50% {
         transform: translateX(10px);
     }
+}
+
+.contact-us-inner {
+    text-align: center;
+    align-items: center;
+}
+
+
+.contact-us-inner hr {
+    color: #F4F5F6;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.contact-us-inner .btn.btn-primary {
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    margin-top: 40px;
+    border: 1px solid black;
+
+}
+
+.contact-us-inner .btn.btn-primary:hover{
+    background-color: white;
+    color: #0B1013;
+    transition: var(--transition);
 }
