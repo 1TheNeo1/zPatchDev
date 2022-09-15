@@ -179,7 +179,10 @@ a {
 .text-inverted {
     color: var(--text-inverted-color);
 }
-
+.text-small{
+    font-size: 14px;
+    font-weight: 700;
+}
 .text.text-default {
     font-size: var(--default-size);
 }
@@ -243,6 +246,8 @@ header#header {
     z-index: 999;
     width: 100%;
     padding-top: 40px;
+    padding-bottom: 20px;
+    transition: var(--transition);
 }
 
 nav#nav {
@@ -459,6 +464,8 @@ li span.plus {
 .discolsures-section ol li {
     list-style: none;
     position: relative;
+    color: #3A3D4D;
+    font-size: 14px;
 }
 
 main {
@@ -490,8 +497,61 @@ main {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+p.text.important-text{
+    font-size: 14px;
+    padding-top: 32px;
+}
 /* end footer */
+
+
+
+
+.states-graph1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.states-graph2{
+    position: absolute;
+    right: 0;
+    top: 155px;
+    z-index: -1;
+}
+
+header#header.header-scroll{
+    background-color: var(--bg-color-primary);
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+.logo-inverted{
+    display: none;
+}
+header#header.header-scroll .normal-logo{
+    display: none;
+}
+header#header.header-scroll .logo-inverted{
+    display: block;
+}
+header#header.header-scroll .hamburger-menu-icon span{
+    background: #000;
+}
+header#header.header-scroll .nav-links.collapse-on .text{
+    color: var(--text-color)
+}
+header#header.header-scroll .btn{
+    color: var(--text-color);
+    border: 1px solid var(--text-color)
+}
+header#header.header-scroll .btn:hover{
+    color: var(--text-color-secondary);
+    border: 1px solid var(--text-color-secondary);
+    background-color: var(--text-color);
+}
+
+.text-fee{
+    color: #0B1013;
+}
 @media only screen and (min-width: 769px) {
     .hero-content {
         max-width: 812px;
@@ -589,6 +649,7 @@ main {
         gap: 30px;
         display: flex;
         justify-content: space-evenly;
+        padding: 0 20px;
     }
 
     #section-5 .single-box {
@@ -699,6 +760,59 @@ main {
     .hamburger-menu-icon {
         z-index: 3;
         position: relative;
+    }
+
+
+    .hamburger-menu-icon span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #cdcdcd;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 20px 7px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    .hamburger-menu-icon span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    .hamburger-menu-icon span:nth-last-child(2) {
+        transform-origin: 80% 0%;
+    }
+
+    /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    .hamburger-menu-icon.animate-image-bar span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    .hamburger-menu-icon.animate-image-bar span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    .hamburger-menu-icon.animate-image-bar span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
     }
 }
 
@@ -867,6 +981,31 @@ main {
 
     #footer {
         padding-bottom: 20px;
+    }
+    .title-icon{
+        width: 60px;
+        height: 60px;
+    }
+    header#header {
+        padding-top: 25px;
+
+    }
+    nav#nav{
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+    .states-graph1 img{
+        max-width: 150px;
+        opacity: 0.7;
+    }
+    .states-graph2 {
+        top: unset;
+        bottom: 0;
+    }
+    .states-graph2 img{
+        max-width: 150px;
+        opacity: 0.7;
     }
 }
 
